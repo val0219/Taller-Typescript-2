@@ -23,6 +23,22 @@
             background-color: #e9ecef;
             font-weight: bold;
         }
+        .serie-link {
+            color: #007bff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .serie-link:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+        .card {
+            margin-top: 20px;
+        }
+        .card-img-top {
+            height: 300px;
+            object-fit: cover;
+        }
     </style>
 </head>
 <body>
@@ -35,25 +51,39 @@
             </h1>
         </div>
 
-        <div class="table-container">
-            <table class="table table-striped table-hover">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Channel</th>
-                        <th scope="col">Seasons</th>
-                    </tr>
-                </thead>
-                <tbody id="seriesTableBody">
-                    
-                </tbody>
-            </table>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="table-container">
+                    <table class="table table-striped table-hover">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Channel</th>
+                                <th scope="col">Seasons</th>
+                            </tr>
+                        </thead>
+                        <tbody id="seriesTableBody">
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div id="serieDetailCard" class="card" style="display: none;">
+                    <img id="serieImage" class="card-img-top" src="" alt="">
+                    <div class="card-body">
+                        <h5 id="serieTitle" class="card-title"></h5>
+                        <p id="serieDescription" class="card-text"></p>
+                        <a id="serieLink" href="#" class="btn btn-primary" target="_blank">Ver más</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.bundle.min.js"></script>
    
-    <script src="dist/app.js"></script>
+    <script src="dist/app-combined.js"></script>
 </body>
 </html>
